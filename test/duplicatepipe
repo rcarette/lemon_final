@@ -1,0 +1,23 @@
+100
+##start
+A 10 21
+##end
+Z 31 61
+E 21 14
+B 78 98
+Y 23 87
+G 69 63
+J 12 74
+P 21 6
+A-B
+A-E
+A-Y
+B-J
+B-P
+P-E
+P-Y
+P-J
+Y-P
+Y-Z
+J-P
+J-Z
