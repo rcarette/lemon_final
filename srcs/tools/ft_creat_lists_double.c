@@ -6,7 +6,7 @@
 /*   By: rcarette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/24 22:55:25 by rcarette          #+#    #+#             */
-/*   Updated: 2017/05/25 05:05:56 by rcarette         ###   ########.fr       */
+/*   Updated: 2017/05/25 07:00:11 by rcarette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void	clear_list_road(t_lists		**lists)
 		free(list_control);
 		(*lists) = (*lists)->next;
 	}
+	free(*lists);
 }
 
 

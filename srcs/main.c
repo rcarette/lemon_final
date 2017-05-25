@@ -6,7 +6,7 @@
 /*   By: rcarette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/18 16:47:28 by rcarette          #+#    #+#             */
-/*   Updated: 2017/05/25 05:20:06 by rcarette         ###   ########.fr       */
+/*   Updated: 2017/05/25 06:21:18 by rcarette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static void		init_lem(t_lem *lem)
 	lem->nbr_path = 0;
 	lem->display_path = 0;
 	lem->match = 0;
+	lem->nbr_shots = 0;
 }
 
 static int		ft_exit(t_lem *lem, char **copy)
@@ -69,6 +70,9 @@ static void		ft_get_opt(int argc, char **argv, t_lem *lem)
 		else if (!ft_strcmp("-m", argv[ite]) \
 										|| !ft_strcmp("--match", argv[ite]))
 			lem->match = 1;
+		else if (!ft_strcmp("-s", argv[ite]) \
+										|| !ft_strcmp("--shots", argv[ite]))
+			lem->nbr_shots = 1;
 	}
 }
 

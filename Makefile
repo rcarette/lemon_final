@@ -6,12 +6,12 @@
 #    By: rcarette <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/26 12:04:47 by rcarette          #+#    #+#              #
-#    Updated: 2017/05/25 02:52:06 by rcarette         ###   ########.fr        #
+#    Updated: 2017/05/25 07:00:43 by rcarette         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = lem-in
-FLAGS = -fsanitize=address
+FLAGS = 
 CC = clang $(FLAGS)
 INC = include/
 LIBFT = libft/
@@ -43,12 +43,18 @@ TOOLS = srcs/tools/replace.c\
 		srcs/tools/ft_display_path.c\
 		srcs/tools/ft_dupliq_list.c\
 		srcs/tools/ft_creat_lists_double.c\
+		srcs/tools/ft_search_small_path.c\
+		srcs/tools/ft_display_move_ant.c\
+		srcs/ft_move_ant.c\
+		srcs/ft_move_ant_first_tube.c\
+		srcs/tools/ft_search_ant.c\
+		srcs/tools/ft_nbr_shots.c\
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	make -C libft/
-	$(CC) -o $(NAME) $(SRCS) $(TOOLS) $(ALL_INC)  -L $(LIBFT) -lft
+	$(CC) -g -o $(NAME) $(SRCS) $(TOOLS) $(ALL_INC)  -L $(LIBFT) -lft
 
 %.o: %.c
 	$(CC) -o $@ -c $< $(ALL_INC)

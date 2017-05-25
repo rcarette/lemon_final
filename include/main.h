@@ -6,7 +6,7 @@
 /*   By: rcarette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/18 00:27:14 by rcarette          #+#    #+#             */
-/*   Updated: 2017/05/25 05:05:37 by rcarette         ###   ########.fr       */
+/*   Updated: 2017/05/25 06:27:03 by rcarette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ typedef struct		s_lem
 	char			*room_e;
 	int				nbr_path;
 	int				display_path;
+	int				nbr_shots;
 	int				match;
 }					t_lem;
 
@@ -178,4 +179,10 @@ t_control		*ft_creat_list_double(t_line *line);
 t_lists			*ft_multi_path(t_lem *lem);
 void			clear_list_road(t_lists **lists);
 void			ft_treatement_opt(t_lem *lem);
+t_line			*ft_search_small_path(t_save *save);
+int				search_ant(t_road *road);
+void			ft_move_ant(t_road **road);
+void			ft_move_ant_firt_tube(t_road **road, int num_ant);
+void			ft_display_move_ant(t_road *road);
+void			ft_nbr_shots(int shots);
 #endif

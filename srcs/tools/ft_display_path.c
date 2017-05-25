@@ -6,7 +6,7 @@
 /*   By: rcarette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/24 18:52:32 by rcarette          #+#    #+#             */
-/*   Updated: 2017/05/25 05:34:38 by rcarette         ###   ########.fr       */
+/*   Updated: 2017/05/25 05:51:10 by rcarette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void		ft_display_index(int index, int nbr_links)
 	write(1, "\033[0;0m", ft_strlen("\033[0;0m"));
 	write(1, "\n", 1);
 	write(1, "\033[0;1m", ft_strlen("\033[0;1m"));
-	write(1, "Number of links : ", 18);
+	write(1, "Number of rooms : ", 18);
 	ft_putnbr(nbr_links);
 	write(1, "\033[0;0m", ft_strlen("\033[0;0m"));
 	write(1, "\n", 2);
